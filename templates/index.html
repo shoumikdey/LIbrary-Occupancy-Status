@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+   <head>
+      <title>MIT Reservation Hall Occupancy Status</title>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+   </head>
+   <body>
+<script type="text/javascript">
+    setTimeout (
+        function() { window.location.reload(); },
+        500
+    )
+</script>
+	<div class="container">
+	<h1 align="center">MIT Individual Study Hall Occupancy Status</h1>
+<br>
+<br>
+	 <table class="table table-bordered table-striped table-hovered">
+    <thead>
+      <tr>
+        <th>Table No</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+	<tbody>
+	<div align="left">
+	{%for item in data %}
+	<tr>
+		<td>{{item[1].strip()}}</td>
+		<td>{{item[2].strip()}}</td>
+	</tr>
+	{% endfor %}
+	</div>
+	</tbody>
+</table>
+</div>
+   </body>
+</html>

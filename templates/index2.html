@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+   <head>
+      <title>DHT Sensor data </title>
+   </head>
+   <body>
+<script type="text/javascript">
+    setTimeout (
+        function() { window.location.reload(); },
+        500
+    )
+</script>
+	<h1>Sensor Data </h1>
+	{%for item in data %}
+	<h3> TABLE  ==>  {{ item[1]  }}</h3>
+	<h3> STATUS ==>  {{ item[2]  }}</h3>
+	<hr>
+	<h3> Last Sensors Reading: {{ item[0] }} ==> <a href="/"class="button">REFRESH</a></h3>	
+	<hr>
+	{% endfor %}
+
+   </body>
+</html>
